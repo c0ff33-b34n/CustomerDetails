@@ -28,5 +28,24 @@ namespace CustomerDetails.Controllers
             };
             return View(viewModel);
         }
+
+        public IActionResult View(int id)
+        {
+            var customer = _customerService.Find(id);
+            var viewModel = new CustomerViewViewModel
+            {
+                Id = customer.Id,
+                FirstName = customer.FirstName,
+                LastName = customer.LastName,
+                BusinessName = customer.BusinessName,
+                BuildingName = customer.BuildingName,
+                NumberAndStreet = customer.NumberAndStreet,
+                LocalityName = customer.LocalityName,
+                TownOrCity = customer.TownOrCity,
+                County = customer.County,
+                PostCode = customer.PostCode
+            };
+            return View(viewModel);
+        }
     }
 }

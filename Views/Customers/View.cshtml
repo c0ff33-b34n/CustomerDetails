@@ -1,0 +1,45 @@
+@model CustomerViewViewModel
+@{
+    ViewData["Title"] = "View Customer";
+}
+
+<h2>Customer Details</h2>
+<p><a asp-action="Create" class="btn btn-default">Add Customer</a></p>
+<ul class="list-group">
+    <li class="list-group-item">
+        First Name:
+        @Html.DisplayFor(modelItem => Model.FirstName)
+    </li>
+    <li class="list-group-item">
+        Last Name:
+        @Html.DisplayFor(modelItem => Model.LastName)
+    </li>
+    <li class="list-group-item">
+        Business Name:
+        @Html.DisplayFor(modelItem => Model.BusinessName)
+    </li>
+    <li class="list-group-item">
+        Building Name:
+        @Html.DisplayFor(modelItem => Model.BuildingName)
+    </li>
+    <li class="list-group-item">
+        Number and Street:
+        @Html.DisplayFor(modelItem => Model.NumberAndStreet)
+    </li>
+    <li class="list-group-item">
+        Locality Name:
+        @Html.DisplayFor(modelItem => Model.LocalityName)
+    </li>
+    <li class="list-group-item">
+        Town or City:
+        @Html.DisplayFor(modelItem => Model.TownOrCity)
+    </li>
+    <li class="list-group-item">
+        County:
+        @Html.DisplayFor(modelItem => Model.County)
+    </li>
+    <li class="list-group-item">
+        Postcode:
+        @Html.DisplayFor(modelItem => Model.PostCode)
+    </li>
+</ul>
