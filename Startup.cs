@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using CustomerDetails.DataLayer;
 using CustomerDetails.DataLayer.EFCore;
+using CustomerDetails.DomainLayer;
+using CustomerDetails.DomainLayer.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +31,7 @@ namespace CustomerDetails
             services.AddDbContext<CustomerContext>(x => x.UseSqlite(Configuration
                 .GetConnectionString("DefaultConnection")));
             services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ICustomerService, CustomerService>();
             services.AddControllersWithViews();
         }
 
