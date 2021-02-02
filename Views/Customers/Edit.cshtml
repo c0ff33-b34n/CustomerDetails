@@ -1,0 +1,22 @@
+@model EditCustomerViewModel
+
+@{
+    ViewData["Title"] = "Edit customer";
+}
+
+<h2>Edit customer</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <h3>Form</h3>
+        <form asp-action="Edit">
+
+            <partial name="_CreateOrEdit" for="Form" />
+
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-default">Cancel</a>
+                <input type="submit" value="Update" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
