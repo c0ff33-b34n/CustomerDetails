@@ -11,16 +11,13 @@ namespace CustomerDetails.Models
         [Required]
         [StringLength(50)]
         public string LastName { get; set; }
-        [Required]
         [StringLength(50)]
         public string BusinessName { get; set; }
-        [Required]
         [StringLength(35)]
         public string BuildingName { get; set; }
         [Required]
         [StringLength(35)]
         public string NumberAndStreet { get; set; }
-        [Required]
         [StringLength(35)]
         public string LocalityName { get; set; }
         [Required]
