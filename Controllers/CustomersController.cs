@@ -104,6 +104,7 @@ namespace CustomerDetails.Controllers
         {
             var customer = new Customer
             {
+                Id = model.Id,
                 FirstName = model.Form.FirstName,
                 LastName = model.Form.LastName,
                 BusinessName = model.Form.BusinessName,
